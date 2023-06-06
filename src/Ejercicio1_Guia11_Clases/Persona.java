@@ -1,14 +1,16 @@
 package Ejercicio1_Guia11_Clases;
 
+import Ejercicio1_Guia11_Clases.Perro;
+
 
 public class Persona {
     private String nombre;
     private String apellido;
     private Integer edad;
     private Integer dni;
+    
     private Perro perro;
-    //private List<Persona> persona;
-
+    
     public Persona() {
     }
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio3_Guia11_Clases">
+  <ClassDiagramComponents>
+    <Class name="Baraja" package="Ejercicio3_Guia11_Clases" visibility="public" xPosition="96.0" yPosition="188.0">
+      <Fields>
+        <Field name="cartas" type="ArrayList&lt;Cartas&gt;" visibility="private"/>
+        <Field name="sc" type="Scanner" visibility="package"/>
+        <Field name="monton" type="ArrayList&lt;Cartas&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="barajar" returnType="void" visibility="public"/>
+        <Method name="siguienteCarta" returnType="void" visibility="public"/>
+        <Method name="darCartas" returnType="void" visibility="public"/>
+        <Method name="cartasMonton" returnType="void" visibility="public"/>
+        <Method name="mostrarBaraja" returnType="void" visibility="public"/>
+        <Method name="cartasDisponibles" returnType="int" visibility="public"/>
+        <Method name="mostrarColumnas" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Cartas" package="Ejercicio3_Guia11_Clases" visibility="public" xPosition="442.0" yPosition="207.0">
+      <Fields>
+        <Field name="numero" type="int" visibility="private"/>
+        <Field name="palo" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="numero"/>
+          <Argument type="String" name="palo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumero" returnType="int" visibility="public"/>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="int" name="numero"/>
+        </Method>
+        <Method name="getPalo" returnType="String" visibility="public"/>
+        <Method name="setPalo" returnType="void" visibility="public">
+          <Argument type="String" name="palo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="cartas" source="Ejercicio3_Guia11_Clases.Baraja" target="Ejercicio3_Guia11_Clases.Cartas" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Cartas&gt;"/>
+    <HasRelation name="monton" source="Ejercicio3_Guia11_Clases.Baraja" target="Ejercicio3_Guia11_Clases.Cartas" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Cartas&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

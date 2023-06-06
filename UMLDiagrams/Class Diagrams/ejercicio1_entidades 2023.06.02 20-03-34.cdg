@@ -2,7 +2,7 @@
 
 <ClassDiagram name="ejercicio1_entidades">
   <ClassDiagramComponents>
-    <Class name="Auto" package="ejercicio1_entidades" visibility="public" xPosition="43.0" yPosition="34.0">
+    <Class name="Auto" package="ejercicio1_entidades" visibility="public" xPosition="442.0" yPosition="525.0">
       <Fields>
         <Field name="propietario" type="Persona" visibility="private"/>
         <Field name="marca" type="String" visibility="private"/>
@@ -22,7 +22,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="DNI" package="ejercicio1_entidades" visibility="public" xPosition="79.0" yPosition="339.0">
+    <Class name="DNI" package="ejercicio1_entidades" visibility="public" xPosition="92.0" yPosition="53.0">
       <Fields>
         <Field name="serie" type="char" visibility="private"/>
         <Field name="numero" type="long" visibility="private"/>
@@ -46,7 +46,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Persona" package="ejercicio1_entidades" visibility="public" xPosition="545.0" yPosition="22.0">
+    <Class name="Persona" package="ejercicio1_entidades" visibility="public" xPosition="442.0" yPosition="21.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="apellido" type="String" visibility="private"/>
@@ -90,12 +90,12 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="autos" source="ejercicio1_entidades.Persona" target="ejercicio1_entidades.Auto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Auto&gt;"/>
-    <UseRelation source="ejercicio1_entidades.Persona" target="ejercicio1_entidades.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="dni" source="ejercicio1_entidades.Persona" target="ejercicio1_entidades.DNI" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ejercicio1_entidades.Persona" target="ejercicio1_entidades.DNI" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="ejercicio1_entidades.Persona" target="ejercicio1_entidades.Auto" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="amigos" source="ejercicio1_entidades.Persona" target="ejercicio1_entidades.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Persona&gt;"/>
+    <UseRelation source="ejercicio1_entidades.Persona" target="ejercicio1_entidades.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ejercicio1_entidades.Persona" target="ejercicio1_entidades.DNI" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dni" source="ejercicio1_entidades.Persona" target="ejercicio1_entidades.DNI" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="autos" source="ejercicio1_entidades.Persona" target="ejercicio1_entidades.Auto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Auto&gt;"/>
     <HasRelation name="propietario" source="ejercicio1_entidades.Auto" target="ejercicio1_entidades.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
