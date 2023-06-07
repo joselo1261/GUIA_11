@@ -17,15 +17,17 @@ public class Ejercicio2_Extra {
         Pelicula pelicula = new Pelicula("Titanic", 180, 13, "James Cameron");
         Cine cine = new Cine(pelicula, 10.0);
         
+        String verde = "\033[32m"; //<= Cambiar color texto
                 
-        System.out.println("************ CINE METROPOLITAN ************");
+        System.out.println(verde+"************ CINE METROPOLITAN ************");
         Date date = new Date();
         System.out.print("Cartelera del dia => " + (new SimpleDateFormat("dd-MM-yyyy").format(date)));
         System.out.println("\n"+pelicula.toString());
         
-        
-        System.out.println("\nOperaciones realizadas");
-        System.out.println("......................");
+        System.out.println("");
+        String celeste = "\033[36m";
+        System.out.println(celeste+"Operaciones realizadas");
+        System.out.println(celeste+"......................");
         Espectador espectador1 = new Espectador("Juan", 15, 15.0);
         cine.venderEntrada(espectador1);
 

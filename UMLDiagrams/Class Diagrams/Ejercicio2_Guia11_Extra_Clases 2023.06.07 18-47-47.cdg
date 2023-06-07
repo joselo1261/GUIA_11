@@ -2,7 +2,7 @@
 
 <ClassDiagram name="Ejercicio2_Guia11_Extra_Clases">
   <ClassDiagramComponents>
-    <Class name="Cine" package="Ejercicio2_Guia11_Extra_Clases" visibility="public" isFinal="true" xPosition="358.0" yPosition="34.0">
+    <Class name="Cine" package="Ejercicio2_Guia11_Extra_Clases" visibility="public" isFinal="true" xPosition="261.0" yPosition="32.0">
       <Fields>
         <Field name="pelicula" type="Pelicula" visibility="private"/>
         <Field name="sala" type="char[][]" visibility="private"/>
@@ -29,7 +29,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Espectador" package="Ejercicio2_Guia11_Extra_Clases" visibility="public" xPosition="103.0" yPosition="377.0">
+    <Class name="Espectador" package="Ejercicio2_Guia11_Extra_Clases" visibility="public" xPosition="40.0" yPosition="377.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="edad" type="int" visibility="private"/>
@@ -51,7 +51,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Pelicula" package="Ejercicio2_Guia11_Extra_Clases" visibility="public" xPosition="635.0" yPosition="354.0">
+    <Class name="Pelicula" package="Ejercicio2_Guia11_Extra_Clases" visibility="public" xPosition="559.0" yPosition="340.0">
       <Fields>
         <Field name="titulo" type="String" visibility="private"/>
         <Field name="duracion" type="int" visibility="private"/>

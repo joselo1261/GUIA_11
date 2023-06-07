@@ -30,33 +30,43 @@ public final class Cine {
     }
 
    public void mostrarSala() {
-       System.out.println("");
-        System.out.println("\t --- Estado de la sala ---");
-        System.out.println("*******************************************");
+        String amarillo = "\033[33m";
+        String magenta = "\033[35m";
+        String blanco = "\033[37m";
+        String rojo = "\033[31m";
+                
+        System.out.println("");
+        System.out.println(amarillo+"\t------- Estado de la Sala -------");
+        System.out.println(amarillo+"*************************************************");
     for (int i = 7; i >= 0; i--) {
         for (int j = 0; j < 6; j++) {
             if (sala[i][j] == ' ') {
-                System.out.print("| " + String.format("%4s", (i + 1) + " " + (char) ('A' + j)) + " ");
+                System.out.print(blanco+"| " + String.format("%5s", (i + 1) + " " + (char) ('A' + j)) + " ");
             } else {
-                System.out.print("| " + String.format("%4s", sala[i][j]) + " ");
+                System.out.print(rojo+"| " + String.format("%5s", sala[i][j]) + " ");
             }
         }
         System.out.println("|");
     }
-        System.out.println("*******************************************");
+        System.out.println(amarillo+"*************************************************");
+        System.out.println("\033[0;1m"+rojo+"X => Vendidos");
         System.out.println("");
 }
    
   
   // Metodo 1: Para vender entradas 
   public boolean venderEntrada(Espectador espectador) {
+        
+        String rojo = "\033[31m";
+        String amarillo = "\033[33m";
+                
         if (espectador.getEdad() < pelicula.getEdadMinima()) {
-            System.out.println(espectador.getNombre() + " no cumple con la edad mínima para ver la película.");
+            System.out.println(rojo+espectador.getNombre() + " : No cumple con la edad mínima para ver la película.");
             return false;
         }
 
         if (espectador.getDineroDisponible() < precioEntrada) {
-            System.out.println(espectador.getNombre() + " no tiene suficiente dinero para comprar la entrada.");
+            System.out.println(amarillo+espectador.getNombre() + " : No tiene suficiente dinero para comprar la entrada.");
             return false;
         }
 
@@ -69,9 +79,10 @@ public final class Cine {
             columna = random.nextInt(6);
         }
 
+        // sala[fila][columna] = espectador.getNombre().charAt(0); //<= Muestra incial del comprador    
         sala[fila][columna] = 'X';
-        espectador.setDineroDisponible(espectador.getDineroDisponible() - precioEntrada);
-        System.out.println(espectador.getNombre() + " ha comprado una entrada para la fila " + (fila + 1) +
+        //espectador.setDineroDisponible(espectador.getDineroDisponible() - precioEntrada);
+        System.out.println(espectador.getNombre() + " : Ha comprado una entrada para la fila " + (fila + 1) +
                 " y columna " + (char) ('A' + columna) + ".");
 
         return true;
@@ -81,10 +92,10 @@ public final class Cine {
     public void tuEntrada (int edadMin , double precioEnt, Espectador esp, char sala[][]){
         boolean cond=true;
         if (esp.getEdad()<edadMin) {
-            System.out.println(esp.getNombre() +" No cumple con la edad minima");
+            System.out.println(esp.getNombre() +" : No cumple con la edad minima");
             cond=false;
         } else if(esp.getDineroDisponible()< precioEnt){
-            System.out.println(esp.getNombre() + " tiene dinero insuficiente");
+            System.out.println(esp.getNombre() + " : Tiene dinero insuficiente");
             cond=false;
         }
         if (cond) {
@@ -98,7 +109,8 @@ public final class Cine {
         }
 
         sala[fila][col] = 'X';
-        System.out.println(esp.getNombre() + " compro la ubicacion " + (fila+1) +" "+ (col+1 ));
+        System.out.println(esp.getNombre() + " ha comprado una entrada para la fila " + (fila + 1) +
+                " y columna " + (char) ('A' + col) + ".");
         }
         
    

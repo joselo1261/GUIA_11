@@ -51,6 +51,7 @@ public class Pelicula {
         this.director = director;
     }
 
+    
     @Override
     public String toString() {
         return "Pelicula: " + titulo + "\nDuracion: " + duracion +" minutos "+"\nProhibida p/menores de: " + edadMinima +" años "+ "\nDirector: " + director;
