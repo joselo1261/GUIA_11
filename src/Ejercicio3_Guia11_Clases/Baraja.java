@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 
 public class Baraja {
-  private ArrayList<Cartas> cartas;
+    private ArrayList<Cartas> cartas;
     Scanner sc = new Scanner(System.in, "ISO-8859-1").useDelimiter("\n");
     private ArrayList<Cartas> monton = new ArrayList();
     
