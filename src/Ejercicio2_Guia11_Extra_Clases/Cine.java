@@ -31,7 +31,6 @@ public final class Cine {
 
    public void mostrarSala() {
         String amarillo = "\033[33m";
-        String magenta = "\033[35m";
         String blanco = "\033[37m";
         String rojo = "\033[31m";
                 
