@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio4_Guia11_Extra_Clases">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="Ejercicio4_Guia11_Extra_Clases" visibility="public" xPosition="-15.0" yPosition="29.0">
+      <Fields>
+        <Field name="nombreCompleto" type="String" visibility="private"/>
+        <Field name="dni" type="String" visibility="private"/>
+        <Field name="cantidadVotos" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombreCompleto"/>
+          <Argument type="String" name="dni"/>
+          <Argument type="int" name="cantidadVotos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombreCompleto" returnType="String" visibility="public"/>
+        <Method name="setNombreCompleto" returnType="void" visibility="public">
+          <Argument type="String" name="nombreCompleto"/>
+        </Method>
+        <Method name="getDni" returnType="String" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="String" name="dni"/>
+        </Method>
+        <Method name="getCantidadVotos" returnType="int" visibility="public"/>
+        <Method name="setCantidadVotos" returnType="void" visibility="public">
+          <Argument type="int" name="cantidadVotos"/>
+        </Method>
+        <Method name="incrementarVotos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Simulador" package="Ejercicio4_Guia11_Extra_Clases" visibility="public" xPosition="382.0" yPosition="397.0">
+      <Fields>
+        <Field name="nombres" type="List&lt;String&gt;" visibility="private"/>
+        <Field name="apellidos" type="List&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="cargarNombres" returnType="void" visibility="private"/>
+        <Method name="cargarApellidos" returnType="void" visibility="private"/>
+        <Method name="generarListadoAlumnos" returnType="List&lt;Alumno&gt;" visibility="public">
+          <Argument type="int" name="cantidad"/>
+        </Method>
+        <Method name="generarDNI" returnType="List&lt;String&gt;" visibility="private">
+          <Argument type="int" name="cantidad"/>
+        </Method>
+        <Method name="generarNombreCompleto" returnType="String" visibility="private"/>
+        <Method name="votacion" returnType="void" visibility="public">
+          <Argument type="List&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+        <Method name="mostrarResultados" returnType="void" visibility="public">
+          <Argument type="List&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+        <Method name="obtenerVotosRealizados" returnType="List&lt;String&gt;" visibility="private">
+          <Argument type="Alumno" name="alumno"/>
+          <Argument type="List&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+        <Method name="recuentoVotos" returnType="void" visibility="public">
+          <Argument type="List&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+        <Method name="mostrarListadoAlumnos" returnType="void" visibility="private">
+          <Argument type="List&lt;Alumno&gt;" name="alumnos"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Voto" package="Ejercicio4_Guia11_Extra_Clases" visibility="public" xPosition="633.0" yPosition="29.0">
+      <Fields>
+        <Field name="votante" type="Alumno" visibility="private"/>
+        <Field name="alumnosVotados" type="ArrayList&lt;Alumno&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Alumno" name="votante"/>
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alumnosVotados"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getVotante" returnType="Alumno" visibility="public"/>
+        <Method name="setVotante" returnType="void" visibility="public">
+          <Argument type="Alumno" name="votante"/>
+        </Method>
+        <Method name="getAlumnosVotados" returnType="ArrayList&lt;Alumno&gt;" visibility="public"/>
+        <Method name="setAlumnosVotados" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Alumno&gt;" name="alumnosVotados"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="alumnosVotados" source="Ejercicio4_Guia11_Extra_Clases.Voto" target="Ejercicio4_Guia11_Extra_Clases.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Alumno&gt;"/>
+    <UseRelation source="Ejercicio4_Guia11_Extra_Clases.Simulador" target="Ejercicio4_Guia11_Extra_Clases.Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="votante" source="Ejercicio4_Guia11_Extra_Clases.Voto" target="Ejercicio4_Guia11_Extra_Clases.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Ejercicio4_Guia11_Extra_Clases.Voto" target="Ejercicio4_Guia11_Extra_Clases.Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio1_Guia11_Extra_Clases">
+  <ClassDiagramComponents>
+    <Class name="Adopcion" package="Ejercicio1_Guia11_Extra_Clases" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="personas" type="ArrayList&lt;Persona&gt;" visibility="private"/>
+        <Field name="perros" type="ArrayList&lt;Perro&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Persona&gt;" name="personas"/>
+          <Argument type="ArrayList&lt;Perro&gt;" name="perros"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPersonas" returnType="ArrayList&lt;Persona&gt;" visibility="public"/>
+        <Method name="setPersonas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Persona&gt;" name="personas"/>
+        </Method>
+        <Method name="getPerros" returnType="ArrayList&lt;Perro&gt;" visibility="public"/>
+        <Method name="setPerros" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Perro&gt;" name="perros"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="Ejercicio1_Guia11_Extra_Clases" visibility="public" xPosition="173.0" yPosition="351.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="raza" type="String" visibility="private"/>
+        <Field name="edad" type="Integer" visibility="private"/>
+        <Field name="sexoAnimal" type="String" visibility="private"/>
+        <Field name="tamanioPerro" type="String" visibility="private"/>
+        <Field name="adoptado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="raza"/>
+          <Argument type="Integer" name="edad"/>
+          <Argument type="String" name="sexoAnimal"/>
+          <Argument type="String" name="tamanioPerro"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getRaza" returnType="String" visibility="public"/>
+        <Method name="setRaza" returnType="void" visibility="public">
+          <Argument type="String" name="raza"/>
+        </Method>
+        <Method name="getEdad" returnType="Integer" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="Integer" name="edad"/>
+        </Method>
+        <Method name="getSexoAnimal" returnType="String" visibility="public"/>
+        <Method name="setSexoAnimal" returnType="void" visibility="public">
+          <Argument type="String" name="sexoAnimal"/>
+        </Method>
+        <Method name="getTamanioPerro" returnType="String" visibility="public"/>
+        <Method name="setTamanioPerro" returnType="void" visibility="public">
+          <Argument type="String" name="tamanioPerro"/>
+        </Method>
+        <Method name="isAdoptado" returnType="boolean" visibility="public"/>
+        <Method name="setAdoptado" returnType="void" visibility="public">
+          <Argument type="boolean" name="adoptado"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="Ejercicio1_Guia11_Extra_Clases" visibility="public" xPosition="683.0" yPosition="-55.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="Integer" visibility="private"/>
+        <Field name="documento" type="Integer" visibility="private"/>
+        <Field name="perro" type="Perro" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="Integer" name="edad"/>
+          <Argument type="Integer" name="documento"/>
+          <Argument type="Perro" name="perro"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getEdad" returnType="Integer" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="Integer" name="edad"/>
+        </Method>
+        <Method name="getDocumento" returnType="Integer" visibility="public"/>
+        <Method name="setDocumento" returnType="void" visibility="public">
+          <Argument type="Integer" name="documento"/>
+        </Method>
+        <Method name="getPerro" returnType="Perro" visibility="public"/>
+        <Method name="setPerro" returnType="void" visibility="public">
+          <Argument type="Perro" name="perro"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="perros" source="Ejercicio1_Guia11_Extra_Clases.Adopcion" target="Ejercicio1_Guia11_Extra_Clases.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Perro&gt;"/>
+    <HasRelation name="personas" source="Ejercicio1_Guia11_Extra_Clases.Adopcion" target="Ejercicio1_Guia11_Extra_Clases.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Persona&gt;"/>
+    <UseRelation source="Ejercicio1_Guia11_Extra_Clases.Persona" target="Ejercicio1_Guia11_Extra_Clases.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Ejercicio1_Guia11_Extra_Clases.Adopcion" target="Ejercicio1_Guia11_Extra_Clases.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Ejercicio1_Guia11_Extra_Clases.Adopcion" target="Ejercicio1_Guia11_Extra_Clases.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="perro" source="Ejercicio1_Guia11_Extra_Clases.Persona" target="Ejercicio1_Guia11_Extra_Clases.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio1_Guia12.Entidades">
+  <ClassDiagramComponents>
+    <Class name="Animal" package="Ejercicio1_Guia12.Entidades" visibility="public" xPosition="63.0" yPosition="16.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="protected"/>
+        <Field name="alimento" type="String" visibility="protected"/>
+        <Field name="edad" type="int" visibility="protected"/>
+        <Field name="razaAnimal" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="razaAnimal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getAlimento" returnType="String" visibility="public"/>
+        <Method name="setAlimento" returnType="void" visibility="public">
+          <Argument type="String" name="alimento"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="getRazaAnimal" returnType="String" visibility="public"/>
+        <Method name="setRazaAnimal" returnType="void" visibility="public">
+          <Argument type="String" name="razaAnimal"/>
+        </Method>
+        <Method name="alimentarse" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Caballo" package="Ejercicio1_Guia12.Entidades" visibility="public" xPosition="119.0" yPosition="535.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="razaAnimal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="alimentarse" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gato" package="Ejercicio1_Guia12.Entidades" visibility="public" xPosition="629.0" yPosition="31.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="razaAnimal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="alimentarse" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="Ejercicio1_Guia12.Entidades" visibility="public" xPosition="612.0" yPosition="292.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="alimento"/>
+          <Argument type="int" name="edad"/>
+          <Argument type="String" name="razaAnimal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="alimentarse" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Ejercicio1_Guia12.Entidades.Gato" target="Ejercicio1_Guia12.Entidades.Animal"/>
+    <IsRelation name="is" source="Ejercicio1_Guia12.Entidades.Caballo" target="Ejercicio1_Guia12.Entidades.Animal"/>
+    <IsRelation name="is" source="Ejercicio1_Guia12.Entidades.Perro" target="Ejercicio1_Guia12.Entidades.Animal"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio4_Guia11_Extra_Clases_Otro">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="Ejercicio4_Guia11_Extra_Clases_Otro" visibility="public" xPosition="337.0" yPosition="434.0">
+      <Fields>
+        <Field name="nombreCompleto" type="String" visibility="private"/>
+        <Field name="dni" type="long" visibility="private"/>
+        <Field name="cantVotos" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombreCompleto"/>
+          <Argument type="long" name="dni"/>
+          <Argument type="int" name="cantVotos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombreCompleto" returnType="String" visibility="public"/>
+        <Method name="setNombreCompleto" returnType="void" visibility="public">
+          <Argument type="String" name="nombreCompleto"/>
+        </Method>
+        <Method name="getDni" returnType="long" visibility="public"/>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="long" name="dni"/>
+        </Method>
+        <Method name="getCantVotos" returnType="int" visibility="public"/>
+        <Method name="setCantVotos" returnType="void" visibility="public">
+          <Argument type="int" name="cantVotos"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Simulador" package="Ejercicio4_Guia11_Extra_Clases_Otro" visibility="public" xPosition="698.0" yPosition="43.0">
+      <Fields>
+        <Field name="alumnos" type="List&lt;Alumno&gt;" visibility="package"/>
+        <Field name="random" type="Random" visibility="package"/>
+        <Field name="dnis" type="List&lt;Long&gt;" visibility="package"/>
+        <Field name="nombresCompletos" type="List&lt;String&gt;" visibility="package"/>
+        <Field name="magenta" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="generarAlumnos" returnType="List&lt;Alumno&gt;" visibility="public"/>
+        <Method name="votacion" returnType="void" visibility="public"/>
+        <Method name="mostrarAlumnos" returnType="void" visibility="public"/>
+        <Method name="facilitadores" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Voto" package="Ejercicio4_Guia11_Extra_Clases_Otro" visibility="public" xPosition="77.0" yPosition="53.0">
+      <Fields>
+        <Field name="alumno" type="Alumno" visibility="private"/>
+        <Field name="alumnosVotados" type="List&lt;Alumno&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Alumno" name="alumno"/>
+          <Argument type="List&lt;Alumno&gt;" name="alumnosVotados"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAlumno" returnType="Alumno" visibility="public"/>
+        <Method name="setAlumno" returnType="void" visibility="public">
+          <Argument type="Alumno" name="alumno"/>
+        </Method>
+        <Method name="getAlumnosVotados" returnType="List&lt;Alumno&gt;" visibility="public"/>
+        <Method name="setAlumnosVotados" returnType="void" visibility="public">
+          <Argument type="List&lt;Alumno&gt;" name="alumnosVotados"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="alumnosVotados" source="Ejercicio4_Guia11_Extra_Clases_Otro.Voto" target="Ejercicio4_Guia11_Extra_Clases_Otro.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Alumno&gt;"/>
+    <HasRelation name="alumnos" source="Ejercicio4_Guia11_Extra_Clases_Otro.Simulador" target="Ejercicio4_Guia11_Extra_Clases_Otro.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Alumno&gt;"/>
+    <HasRelation name="alumno" source="Ejercicio4_Guia11_Extra_Clases_Otro.Voto" target="Ejercicio4_Guia11_Extra_Clases_Otro.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Ejercicio4_Guia11_Extra_Clases_Otro.Voto" target="Ejercicio4_Guia11_Extra_Clases_Otro.Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Ejercicio4_Guia11_Extra_Clases_Otro.Simulador" target="Ejercicio4_Guia11_Extra_Clases_Otro.Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
